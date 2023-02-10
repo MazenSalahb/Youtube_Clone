@@ -4,12 +4,17 @@
     --shadow: 3px 3.4px 10px rgba(0, 0, 0, 0.035),24px 27px 80px rgba(0, 0, 0, 0.07);
     --color-black :#000;
     --color-muted : #757e85;
+    --color-white : #fff;
 }
 * {
     margin : 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
+}
+
+input{
+    background-color: var(--color-white);
 }
 
 html {
@@ -19,6 +24,7 @@ html {
 
 body {
     font-family: "Roboto","Arial",sans-serif;
+    background-color: var(--color-white);
 }
 
 header{
@@ -113,8 +119,8 @@ header{
 
 aside{
     height: 100%;
-    width: 240px;
-    background-color: #fff;
+    width: 280px;
+    background-color: var(--color-white);
     overflow-y: auto;
 }
 
@@ -246,3 +252,24 @@ main{
 .video-creator:hover{
     color:var(--color-black);
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b8b8b8; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
