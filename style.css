@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --shadow: 3px 3.4px 10px rgba(0, 0, 0, 0.035),24px 27px 80px rgba(0, 0, 0, 0.07);
+    --color-black :#000;
+    --color-muted : #757e85;
+}
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto","Arial",sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 16px;
+    margin: 0 16px;
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.left-section img{
+    width: 46%;
+    padding-left: 16px;
+}
+
+.mid-section{
+    display: flex;
+    align-items: center;
+    margin-left: -9%;
+}
+
+.mid-section form{
+    display: flex;
+    height: 40px;
+    width: 628px;
+    
+}
+
+.mid-section input{
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    padding: 12px;
+    border: 1px solid #d3d3d3;
+    border-right: none;
+    font-size: 1.6rem;
+    box-shadow: var(--shadow);
+    box-shadow: inset 0 0 2px #1818181f;
+    transition: 0.2s;
+}
+
+.mid-section input:focus{
+    border: 1px solid #1a58a4;
+}
+
+.mid-section button{
+    border-radius: 0 50px 50px 0;
+    width: 64px;
+    border: 1px solid #d3d3d3;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mid-section button:hover{
+    background-color: #ececec;
+}
+
+.mid-section .mic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    transition: 0.1s;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.mid-section .mic:hover{
+    background-color: #e5e5e5;
+}
+
+.right-section a{
+    padding-right: 18px;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.content-area{
+    height: calc(100vh - 56px);
+    display: flex;
+}
+
+aside{
+    height: 100%;
+    width: 240px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+aside nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    padding-right: 15px;
+}
+
+aside .nav-link{
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    color: var(--color-black);
+    text-decoration: none;
+    margin-left: 16px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.active, aside .nav-link:hover {
+    background-color: #f2f2f2;
+}
+
+.nav-link span{
+    margin-left: 24px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+#active-span{
+    font-weight: 600;
+}
+
+aside hr{
+    width: 80%;
+    margin: auto;
+    margin: 10px auto;
+    border: 0.2px solid #e5e5e5;
+}
+
+nav p{
+    font-size: 1.6rem;
+    padding: 8px 16px;
+    margin-left: 16px;
+}
+
+.channel-img{
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+}
+
+/* Videos Section */
+
+main{
+    width: 100%;
+    height: 100%;
+    padding: 35px 15px;
+    overflow-y: auto;
+}
+
+.videos-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.video{
+    width: 330px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 187px;
+    margin-bottom: 12px;
+}
+
+.thumbnail img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.video-details{
+    display: flex;
+}
+
+.creator-img img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+
+.title a{
+    text-decoration: none;
+}
+
+.video-title{
+    color: var(--color-black);
+    font-size: 1.6rem;
+    max-width: 278px;
+    line-height: 2.2rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.video-creator , .title span{
+    color: var(--color-muted);
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+
+.video-creator:hover{
+    color:var(--color-black);
+}
