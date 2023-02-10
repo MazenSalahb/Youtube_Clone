@@ -203,6 +203,19 @@ main{
     width: 100%;
     height: 187px;
     margin-bottom: 12px;
+    position: relative;
+}
+
+.thumbnail span{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--color-white);
+    background-color: #000000b0;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .thumbnail img{
