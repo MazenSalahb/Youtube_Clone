@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="left-section">
-            <i class="material-icons logo">menu</i>
+            <i class="material-icons logo" id="logo">menu</i>
             <img src="./images/youtube-logo.png" alt="">
         </div>
 
@@ -33,7 +33,7 @@
     </header>
 
     <div class="content-area">
-        <aside>
+        <aside id="aside">
             <nav>
                 <a href="#" class="nav-link active">
                     <i class="material-icons">home</i>
@@ -370,5 +370,26 @@
             </div>
         </main>
     </div>
+
+
+    <script>
+        let isMobile = window.matchMedia("only screen and (max-width: 600px)").matches;
+        if (isMobile) {
+            const hoverMe = document.getElementById("logo");
+            const changeMe = document.getElementById("aside");
+
+            hoverMe.addEventListener("mouseover", function() {
+            changeMe.style.display = "flex";
+            changeMe.style.position= "absolute";
+            changeMe.style.backgroundColor ="white";
+            changeMe.style.zIndex = "10";
+            changeMe.style.transition ="0.3s";
+            changeMe.style.left ="0";
+            });
+            hoverMe.addEventListener("mouseout", function() {
+            changeMe.style.left ="-290px";
+        });
+        }
+    </script>
 </body>
 </html>

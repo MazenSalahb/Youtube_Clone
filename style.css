@@ -122,9 +122,10 @@ header{
 
 aside{
     height: 100%;
-    width: 280px;
+    width: 285px;
     background-color: var(--color-white);
     overflow-y: auto;
+    transition: 0.2s;
 }
 
 aside nav{
@@ -197,7 +198,7 @@ main{
 }
 
 .video{
-    width: 330px;
+    width: 320px;
     margin: 20px 10px;
     cursor: pointer;
 }
@@ -272,7 +273,7 @@ main{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
@@ -283,6 +284,7 @@ main{
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #b8b8b8; 
+    border-radius: 10px;
   }
   
   /* Handle on hover */
@@ -302,7 +304,12 @@ main{
         display: none;
     }
     aside{
-        display: none;
+        display: flex;
+        position: absolute;
+        background-color: #fff;
+        overflow: auto;
+        left: -290px;
+        z-index: 10;
     }
     .left-section img{
         width: 115px;
